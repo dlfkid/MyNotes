@@ -1,0 +1,34 @@
+//
+//  NoteDataStorage.h
+//  MyNoteBook
+//
+//  Created by Ivan_deng on 2016/12/16.
+//  Copyright © 2016年 Ivan_deng. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "NoteLog.h"
+
+@interface NoteDataStorage : NSObject
+
+@property(nonatomic,strong) NSMutableArray *noteCollection;
+
++ (NoteDataStorage *)getInstance;
+
+- (int)insertNote:(NoteLog *)noteLog;
+
+- (int)removeNote:(NoteLog *)noteLog;
+
+- (int)modifyNote:(NoteLog *)noteLog;
+
++ (NSMutableArray *)addingNote:(NoteLog *)note;
+
++ (NSMutableArray *)deletingNote:(NoteLog *)note;
+
++ (NSMutableArray *)allNote:(NoteLog *)note;
+
+- (NoteLog *)getSepiceficNote:(NoteLog *)noteLog;
+
+- (NSMutableArray *)getNoteList;
+
+@end
