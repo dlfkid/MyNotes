@@ -11,6 +11,7 @@
 #import "DetailViewController.h"
 #import "NoteTableViewCell.h"
 #import "NoteDataStorage.h"
+#import "ChangeButtonTool.h"
 
 @interface MainTableViewController ()
 
@@ -31,7 +32,15 @@
     fotter.text = @"Buttom";
     fotter.textAlignment = NSTextAlignmentCenter;
     fotter.backgroundColor = [UIColor grayColor];
-    self.tableView.tableFooterView = fotter;
+    UIButton *buttomButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [buttomButton setFrame:fotter.frame];
+    [buttomButton addTarget:self action:@selector(showUpButtomMessage) forControlEvents:UIControlEventTouchUpInside];
+    [buttomButton setBackgroundColor:[UIColor yellowColor]];
+    [fotter addSubview:buttomButton];
+    [ChangeButtonTool changeButtonTitleWithText:^(NSString *title) {
+        [buttomButton setTitle:title forState:UIControlStateNormal];
+    }];
+    self.tableView.tableFooterView = buttomButton;
     
     [self.tableView registerClass:[NoteTableViewCell class] forCellReuseIdentifier:@"notes"];
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
@@ -69,6 +78,14 @@
     [self presentViewController:navAdd animated:true completion:^{
         NSLog(@"Presented addViewController");
     }];
+}
+
+- (void)showUpButtomMessage {
+    NSLog(@"Buttom Clicked!");
+    UIAlertController *alertButtom = [UIAlertController alertControllerWithTitle:@"warning" message:@"You have reached the buttom" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okaction = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alertButtom addAction:okaction];
+    [self presentViewController:alertButtom animated:true completion:nil];
 }
 
 #pragma mark - Table view data source

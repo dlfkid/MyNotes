@@ -5,6 +5,8 @@ target 'MyNoteBook' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
   pod 'FMDB', '~> 2.7.2'
+  pod 'SDWebImage', '~> 4.1.2'
+  pod 'AFNetworking', '~> 3.1.0'
 
   # Pods for MyNoteBook
 

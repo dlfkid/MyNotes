@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40BB4F71FCBF18800EBF57D /* ChangeButtonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B40BB4F61FCBF18800EBF57D /* ChangeButtonTool.m */; };
+		B40BB4FB1FCC14CA00EBF57D /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B40BB4FA1FCC14CA00EBF57D /* NetWorkManager.m */; };
 		B4ABAB221FC30BE100D2043F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ABAB211FC30BE100D2043F /* libsqlite3.0.tbd */; };
 		B4EAA28B1E028BE100AF0963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EAA28A1E028BE100AF0963 /* main.m */; };
 		B4EAA28E1E028BE100AF0963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EAA28D1E028BE100AF0963 /* AppDelegate.m */; };
@@ -51,6 +53,10 @@
 		8E92366244523B845E25636E /* Pods-MyNoteBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNoteBookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyNoteBookUITests/Pods-MyNoteBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7C51D9D5BB86661F20427C9 /* libPods-MyNoteBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyNoteBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF71CBD739ED342E6F2D5C7 /* Pods-MyNoteBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNoteBookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyNoteBookUITests/Pods-MyNoteBookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B40BB4F51FCBF18800EBF57D /* ChangeButtonTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeButtonTool.h; sourceTree = "<group>"; };
+		B40BB4F61FCBF18800EBF57D /* ChangeButtonTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeButtonTool.m; sourceTree = "<group>"; };
+		B40BB4F91FCC14CA00EBF57D /* NetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		B40BB4FA1FCC14CA00EBF57D /* NetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		B4ABAB211FC30BE100D2043F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B4EAA2861E028BE100AF0963 /* MyNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EAA28A1E028BE100AF0963 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -124,6 +130,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B40BB4F81FCBF19300EBF57D /* ChangeButtonTool */ = {
+			isa = PBXGroup;
+			children = (
+				B40BB4F51FCBF18800EBF57D /* ChangeButtonTool.h */,
+				B40BB4F61FCBF18800EBF57D /* ChangeButtonTool.m */,
+			);
+			name = ChangeButtonTool;
+			sourceTree = "<group>";
+		};
 		B4C8D3551FA03B4800145F6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +177,7 @@
 			children = (
 				B4EAA28C1E028BE100AF0963 /* AppDelegate.h */,
 				B4EAA28D1E028BE100AF0963 /* AppDelegate.m */,
+				B40BB4F81FCBF19300EBF57D /* ChangeButtonTool */,
 				B4EAA2D31E052F4A00AF0963 /* NoteLog */,
 				B4EAA2CF1E03EBCA00AF0963 /* noteStorage */,
 				B4EAA2CB1E03828000AF0963 /* noteCell */,
@@ -244,6 +260,8 @@
 			children = (
 				B4EAA2CC1E03EBC300AF0963 /* NoteDataStorage.h */,
 				B4EAA2CD1E03EBC300AF0963 /* NoteDataStorage.m */,
+				B40BB4F91FCC14CA00EBF57D /* NetWorkManager.h */,
+				B40BB4FA1FCC14CA00EBF57D /* NetWorkManager.m */,
 			);
 			name = noteStorage;
 			sourceTree = "<group>";
@@ -551,9 +569,11 @@
 				B4EAA2C61E02920F00AF0963 /* DetailViewController.m in Sources */,
 				B4EAA28E1E028BE100AF0963 /* AppDelegate.m in Sources */,
 				B4EAA28B1E028BE100AF0963 /* main.m in Sources */,
+				B40BB4FB1FCC14CA00EBF57D /* NetWorkManager.m in Sources */,
 				B4EAA2CA1E03827600AF0963 /* NoteTableViewCell.m in Sources */,
 				B4EAA2D21E052F4600AF0963 /* NoteLog.m in Sources */,
 				B4EAA2C21E02905F00AF0963 /* AddViewController.m in Sources */,
+				B40BB4F71FCBF18800EBF57D /* ChangeButtonTool.m in Sources */,
 				B4EAA2BE1E028CC700AF0963 /* MainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

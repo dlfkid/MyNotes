@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTableViewController.h"
+#import "NetWorkManager.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,7 @@
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:tableViewController];
     [self.window setRootViewController:nav];
     // Override point for customization after application launch.
+    [NetWorkManager postRequestBegin];
     return YES;
 }
 
